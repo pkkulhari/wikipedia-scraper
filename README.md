@@ -14,10 +14,6 @@ A wikipedia scraper to scrape the information from a wikipedia’s country page.
 | :------------- | :------- | :----------- |
 | `country_name` | `string` | **Required** |
 
-## Demo
-
-https://wikipedia-scraper.onrender.com/api/country_info/india
-
 ## Run Locally
 
 Clone the project
