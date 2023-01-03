@@ -6,6 +6,4 @@ from . import views
 router = routers.DefaultRouter()
 router.register(r"country_info", views.CountryViewSet, basename="country_info")
 
-urlpatterns = [
-    path("", include(router.urls)),
-]
+urlpatterns = router.urls

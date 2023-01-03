@@ -6,14 +6,9 @@ from .scrape import get_country_info
 
 
 class CountryViewSet(viewsets.ViewSet):
-    def list(self, request):
-        country_name = request.query_params.get("country_name")
-
-        if not country_name:
-            return Response({"error": "Please provide a country name."})
-
+    def retrieve(self, request, pk=None):
         try:
-            country_info = get_country_info(country_name)
+            country_info = get_country_info(pk)
         except Exception as e:
             return Response({"error": str(e)})
 
